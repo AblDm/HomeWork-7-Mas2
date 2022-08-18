@@ -60,12 +60,10 @@ public class Main {
         System.out.println("\n\nЗадание 4");
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
 
-        char symbol = 0;
+        char symbol;
         for (int i = 0; i < (reverseFullName.length-1); i++) {
             symbol = reverseFullName[i];
-            reverseFullName[i] = reverseFullName[reverseFullName.length - i-1] = symbol;}
-//
-
+            reverseFullName[i] = reverseFullName[reverseFullName.length - i-1 ] = symbol;}
         System.out.println(reverseFullName);
 
 
