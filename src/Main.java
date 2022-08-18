@@ -60,13 +60,13 @@ public class Main {
         System.out.println("\n\nЗадание 4");
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
 
-        char synbol = 0;
-        for (int i = 0; i < reverseFullName.length/2; i++) {
-            synbol = reverseFullName[i];
-            reverseFullName[i] = reverseFullName[reverseFullName.length - 1 -i] = synbol;}
+        char symbol = 0;
+        for (int i = 0; i < (reverseFullName.length-1); i++) {
+            symbol = reverseFullName[i];
+            reverseFullName[i] = reverseFullName[reverseFullName.length - i-1] = symbol;}
 //
 
-        System.out.println(synbol);
+        System.out.println(reverseFullName);
 
 
 
