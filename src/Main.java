@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Random;
 
 public class Main {
 
@@ -20,7 +21,7 @@ public class Main {
 
     }
     public static void main(String[] args) {
-        java.util.Random random = new java.util.Random();
+        Random random = new Random();
         int[] arr = new int[30];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = random.nextInt(100_000) + 100_000;
@@ -44,7 +45,13 @@ public class Main {
             }
         }
         System.out.print("Минимальные затраты " + minArr + " рублей");
-
+        int maxArr = 100_000;
+        for (int j : arr) {
+            if (j > maxArr) {
+                maxArr = j;
+            }
+        }
+        System.out.print(", а максимальные затраты " + maxArr + " рублей");
         //task 3
         System.out.println("\n\nЗадание 3");
 
@@ -53,18 +60,17 @@ public class Main {
             sum1 += i;
         }
         float vSum = sum1 / arr.length;
-        System.out.print(vSum);
-
-
+        String str = String.format("Средняя сумма трат за месяц составила  %.2f рублей ", vSum);
+        System.out.println(str);
         //task 4
         System.out.println("\n\nЗадание 4");
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        int i= reverseFullName.length - 1;
+        for (; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
+        }
 
-        char symbol;
-        for (int i = 0; i < (reverseFullName.length-1); i++) {
-            symbol = reverseFullName[i];
-            reverseFullName[i] = reverseFullName[reverseFullName.length - i-1 ] = symbol;}
-        System.out.println(reverseFullName);
+
 
 
 
